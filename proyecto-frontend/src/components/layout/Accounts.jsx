@@ -43,6 +43,15 @@ function Accounts(){
         setOpen(false);
     };
 
+    function createData(image,user,email, password, hierarchy) {
+        return { image, user, email, password, hierarchy };
+    }
+
+    const rows = [
+        createData("https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.hsi.es%2Fwp-content%2Fuploads%2F2020%2F03%2Fusuario.png&f=1&nofb=1","Nombre","email@email.com","Contraseña","Dueño"),
+        createData("https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fimage.flaticon.com%2Ficons%2Fpng%2F512%2F219%2F219970.png&f=1&nofb=1","Nombre","email@email.com","Contraseña","Co-Dueño"),
+    ]
+
     return(
         <div className = "container mx-auto px-6 py-8">
             <h3 className="text-gray-700 text-3xl font-medium">Cuentas</h3>
@@ -125,56 +134,34 @@ function Accounts(){
                                     </tr>
                                 </thead>
                                 <tbody className = "bg-white">
-                                    <tr>
-                                        <td className="px-6 py-4 whitespace-no-wrap border-b border-gray-200">
-                                            <div className="flex items-center">
-                                                <div className="flex-shrink-0 h-10 w-10">
-                                                    <img className="h-10 w-10 rounded-full" src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.hsi.es%2Fwp-content%2Fuploads%2F2020%2F03%2Fusuario.png&f=1&nofb=1" alt="" loading = "lazy"/>
-                                                </div>
-                                                <div className="ml-4">
-                                                    <div className="text-sm leading-5 font-medium text-gray-900">Nombre
+                                    {rows.map((row) => (
+                                        <tr key = {row.hierarchy}>
+                                            <td className="px-6 py-4 whitespace-no-wrap border-b border-gray-200">
+                                                <div className="flex items-center">
+                                                    <div className="flex-shrink-0 h-10 w-10">
+                                                        <img className="h-10 w-10 rounded-full" src={row.image} alt="" loading = "lazy"/>
                                                     </div>
-                                                    <div className="text-sm leading-5 text-gray-500">email@email.com</div>
-                                                </div>
-                                            </div>
-                                        </td>
-                                        <td className="px-6 py-4 whitespace-no-wrap border-b border-gray-200 text-sm leading-5 text-gray-500">
-                                            Contraseña
-                                        </td>
-                                        <td className="px-6 py-4 whitespace-no-wrap border-b border-gray-200">
-                                            <div className="text-sm leading-5 text-gray-900">Dueño</div>
-                                        </td>
-                                        <td className="px-6 py-4 whitespace-no-wrap text-right border-b border-gray-200 text-sm leading-5 font-medium">
-                                            <button className = "w-full inline-flex justify-center rounded-md px-4 py-2 font-medium focus:ring-2 focus:ring-offset-2 sm:ml-3 sm:w-auto sm:text-sm focus:ring-red-500 border border-transparent bg-white text-gray-700 hover:text-red-500">
-                                                <DeleteOutlineIcon/>
-                                            </button>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td className="px-6 py-4 whitespace-no-wrap border-b border-gray-200">
-                                            <div className="flex items-center">
-                                                <div className="flex-shrink-0 h-10 w-10">
-                                                    <img className="h-10 w-10 rounded-full" src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fimage.flaticon.com%2Ficons%2Fpng%2F512%2F219%2F219970.png&f=1&nofb=1" alt="" loading = "lazy"/>
-                                                </div>
-                                                <div className="ml-4">
-                                                    <div className="text-sm leading-5 font-medium text-gray-900">Nombre
+                                                    <div className="ml-4">
+                                                        <div className="text-sm leading-5 font-medium text-gray-900">
+                                                            {row.user}
+                                                        </div>
+                                                        <div className="text-sm leading-5 text-gray-500">{row.email}</div>
                                                     </div>
-                                                    <div className="text-sm leading-5 text-gray-500">email@email.com</div>
                                                 </div>
-                                            </div>
-                                        </td>
-                                        <td className="px-6 py-4 whitespace-no-wrap border-b border-gray-200 text-sm leading-5 text-gray-500">
-                                            Contraseña
-                                        </td>
-                                        <td className="px-6 py-4 whitespace-no-wrap border-b border-gray-200">
-                                            <div className="text-sm leading-5 text-gray-900">Co-dueño</div>
-                                        </td>
-                                        <td className="px-6 py-4 whitespace-no-wrap text-right border-b border-gray-200 text-sm leading-5 font-medium">
-                                            <button className = "w-full inline-flex justify-center rounded-md px-4 py-2 font-medium focus:ring-2 focus:ring-offset-2 sm:ml-3 sm:w-auto sm:text-sm focus:ring-red-500 border border-transparent bg-white text-gray-700 hover:text-red-500">
-                                                <DeleteOutlineIcon/>
-                                            </button>
-                                        </td>
-                                    </tr>
+                                            </td>
+                                            <td className="px-6 py-4 whitespace-no-wrap border-b border-gray-200 text-sm leading-5 text-gray-500">
+                                                {row.password}
+                                            </td>
+                                            <td className="px-6 py-4 whitespace-no-wrap border-b border-gray-200">
+                                                <div className="text-sm leading-5 text-gray-900">{row.hierarchy}</div>
+                                            </td>
+                                            <td className="px-6 py-4 whitespace-no-wrap text-right border-b border-gray-200 text-sm leading-5 font-medium">
+                                                <button className = "w-full inline-flex justify-center rounded-md px-4 py-2 font-medium sm:ml-3 sm:w-auto sm:text-sm border border-transparent bg-white text-gray-700 hover:text-red-500">
+                                                    <DeleteOutlineIcon/>
+                                                </button>
+                                            </td>
+                                        </tr>
+                                    ))}
                                 </tbody>
                             </table>
                         </div>

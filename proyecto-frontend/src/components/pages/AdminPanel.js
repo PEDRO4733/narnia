@@ -20,15 +20,15 @@ function AdminPanel(){
                     </div>
                 </div>
                 <nav className = "mt-10">
-                    <a className = "flex items-center mt-4 py-2 px-6 hover:bg-gray-500 bg-opacity-25 text-gray-100" onClick = {() => setPage(0)}>
+                    <a className = "flex items-center mt-4 py-2 px-6 hover:bg-gray-500 bg-opacity-25 text-gray-100" href = "#/" onClick = {() => setPage(0)}>
                         <SupervisorAccountOutlinedIcon/>
                         <span className = "mx-3">Cuentas</span>
                     </a>
-                    <a className = "flex items-center mt-4 py-2 px-6 hover:bg-gray-500 bg-opacity-25 text-gray-100" onClick = {() => setPage(1)}>
+                    <a className = "flex items-center mt-4 py-2 px-6 hover:bg-gray-500 bg-opacity-25 text-gray-100" href = "#/" onClick = {() => setPage(1)}>
                         <MonetizationOnOutlinedIcon/>
                         <span className = "mx-3">Tokens</span>
                     </a>
-                    <a className = "flex items-center mt-4 py-2 px-6 hover:bg-gray-500 bg-opacity-25 text-gray-100" onClick = {() => setPage(2)}>
+                    <a className = "flex items-center mt-4 py-2 px-6 hover:bg-gray-500 bg-opacity-25 text-gray-100" href = "#/" onClick = {() => setPage(2)}>
                         <ChangeHistoryOutlinedIcon/>
                         <span className = "mx-3">Jerarquias</span>
                     </a>
