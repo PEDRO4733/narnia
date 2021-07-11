@@ -2,6 +2,7 @@
   "name": "proyecto-frontend",
   "version": "0.1.0",
   "private": true,
+  "license": "UNLICENSED",
   "dependencies": {
     "@craco/craco": "^6.1.2",
     "@electron/remote": "^1.1.0",

@@ -58,7 +58,7 @@ function Login(){
                                                 <button onClick = {handleSubmit} className = "bg-gray-700 text-white active:bg-gray-100 text-sm font-bold uppercase px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 w-75" type="button">Iniciar Sesión</button>
                                             </div>
                                             <div className = "text-center mt-4">
-                                                <Link to = "/register"><p>¿Queres registrarte?</p></Link>
+                                                <Link to = "/user/view"><p>¿Queres registrarte?</p></Link>
                                             </div>
                                         </form>
                                     </div>

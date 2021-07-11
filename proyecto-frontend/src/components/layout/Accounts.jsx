@@ -59,7 +59,7 @@ function Accounts(){
                 <div className = "flex flex-col mt-8">
                     <div className = "-my-2 py-2 overflow-x-auto sm:-mx-6 sm:px-6 lg:-mx-8 lg:px-8">
                         <div className = "flex content-center items-center justify-center h-full mb-3">
-                            <button onClick = {handleOpen} className = " bg-indigo-500 text-white active:bg-indigo-700 text-sm font-bold uppercase px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 w-75" type="button">Agregar cuentas</button>
+                            <button onClick = {handleOpen} className = "bg-indigo-500 text-white active:bg-indigo-700 text-sm font-bold uppercase px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 w-75" type="button">Agregar cuentas</button>
                         </div>
                         <Modal
                             onBackdropClick = {handleClose}

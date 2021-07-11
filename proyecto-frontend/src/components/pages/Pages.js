@@ -5,6 +5,7 @@ import Login from './Login';
 import Register from './Register';
 import Landing from './Landing';
 import AdminPanel from './AdminPanel';
+import UserView from './UserView';
 
 function Pages(){
 
@@ -18,6 +19,7 @@ function Pages(){
                     <Route exact path = "/login" component = {Login}/>
                     <Route exact path = "/register" component = {Register}/>
                     <Route exact path = "/admin/panel" component = {AdminPanel}/>
+                    <Route exact path = "/user/view" component = {UserView}/>
                 </>
             )}
             {loggedIn === true &&(
