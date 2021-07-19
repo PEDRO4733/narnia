@@ -92,7 +92,7 @@ function Accounts(){
                                                             <div className = "relative w-full mb-3">
                                                                 <label className = "block uppercase text-gray-700 text-xs font-bold mb-2" for="grid-password">Jerarquia</label>
                                                                 <select onChange = {handleChange} value = {account.hierarchy} type = "select" className = "px-3 py-3 text-gray-700 bg-white border border-transparent rounded text-sm shadow focus:outline-none focus:shadow-outline w-full">
-                                                                    <option className = "text-gray-400" disabled selected>Elegir jerarquia</option>
+                                                                    <option className = "text-gray-400" disabled defaultValue>Elegir jerarquia</option>
                                                                     <option>Dueño</option>
                                                                     <option>Co-Dueño</option>
                                                                 </select>

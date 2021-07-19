@@ -8,7 +8,10 @@ function createWindow(){
         height:800,
         frame:true,
         webPreferences:{
-            enableRemoteModule:true
+            nodeIntegration: true,
+            enableRemoteModule:true,
+            contextIsolation: false,
+            preload: __dirname + '/preload.js'
         }
     });
 
