@@ -66,50 +66,46 @@ function Accounts(){
                             disableEnforceFocus
                             open={open}
                             onClose={handleClose}
-                            aria-labelledby="simple-modal-title"
-                            aria-describedby="simple-modal-description"
                         >
                             <div class="container mx-auto px-4 h-full">
                                 <div class="flex content-center items-center justify-center h-full">
                                     <div class="w-full lg:w-4/12 px-4 pt-28">
                                         <div class="relative flex flex-col min-w-0 break-words w-full mb-6 shadow-lg rounded-lg bg-gray-100 border-0">
                                             <div class="rounded-t mb-0 px-6 py-6">
-                                                <div className = "rounded-t mb-0 px-6 py-3">
-                                                    <div className = "flex-auto px-4 lg:px-10 py-5 pt-0">
-                                                        <button className = "rounded-full flex items-center justify-center hover:bg-gray-200" onClick = {handleClose}>
-                                                            <CloseOutlinedIcon/>
-                                                        </button>
-                                                        <h3 className = "text-center font-semibold text-2xl mb-4 text-gray-700">Nueva cuenta</h3>
-                                                        <form onSubmit = {accountSubmit}>
-                                                            <div className = "relative w-full mb-3">
-                                                                <label className = "block uppercase text-gray-700 text-xs font-bold mb-2" for="grid-password">Nombre</label>
-                                                                <input onChange = {handleChange} value = {account.name} type="text" className = "px-3 py-3 placeholder-gray-400 text-gray-700 bg-white border border-transparent rounded text-sm shadow focus:outline-none focus:shadow-outline w-full" placeholder="Nombre"/>
-                                                            </div>
-                                                            <div className = "relative w-full mb-3">
-                                                                <label className = "block uppercase text-gray-700 text-xs font-bold mb-2" for="grid-password">Email</label>
-                                                                <input onChange = {handleChange} value = {account.email} type="email" className = "px-3 py-3 placeholder-gray-400 text-gray-700 bg-white border border-transparent rounded text-sm shadow focus:outline-none focus:shadow-outline w-full" placeholder="Email"/>
-                                                            </div>
-                                                            <div className = "relative w-full mb-3">
-                                                                <label className = "block uppercase text-gray-700 text-xs font-bold mb-2" for="grid-password">Jerarquia</label>
-                                                                <select onChange = {handleChange} value = {account.hierarchy} type = "select" className = "px-3 py-3 text-gray-700 bg-white border border-transparent rounded text-sm shadow focus:outline-none focus:shadow-outline w-full">
-                                                                    <option className = "text-gray-400" disabled defaultValue>Elegir jerarquia</option>
-                                                                    <option>Dueño</option>
-                                                                    <option>Co-Dueño</option>
-                                                                </select>
-                                                            </div>
-                                                            <div className = "relative w-full mb-3">
-                                                                <label className = "block uppercase text-gray-700 text-xs font-bold mb-2" for="grid-password">Contraseña</label>
-                                                                <input onChange = {handleChange} value = {account.password} type="password" className = "px-3 py-3 placeholder-gray-400 text-gray-700 bg-white border border-transparent rounded text-sm shadow focus:outline-none focus:shadow-outline w-full" placeholder="Contraseña"/>
-                                                            </div>
-                                                            <div className = "relative w-full mb-3">
-                                                                <label className = "block uppercase text-gray-700 text-xs font-bold mb-2" for="grid-password">Contraseña repetida</label>
-                                                                <input onChange = {handleChange} value = {account.passwordCheck} type="password" className = "px-3 py-3 placeholder-gray-400 text-gray-700 bg-white border border-transparent rounded text-sm shadow focus:outline-none focus:shadow-outline w-full" placeholder="Contraseña repetida"/>
-                                                            </div>
-                                                            <div className = "text-center mt-6">
-                                                                <button onClick = {handleSubmit} className = "bg-gray-700 text-white active:bg-gray-100 text-sm font-bold uppercase px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 w-75" type="button">Crear</button>
-                                                            </div>
-                                                        </form>
-                                                    </div>
+                                                <div className = "flex-auto px-4 lg:px-10 py-5 pt-0">
+                                                    <button className = "rounded-full flex items-center justify-center hover:bg-gray-200" onClick = {handleClose}>
+                                                        <CloseOutlinedIcon/>
+                                                    </button>
+                                                    <h3 className = "text-center font-semibold text-2xl mb-4 text-gray-700">Nueva cuenta</h3>
+                                                    <form onSubmit = {accountSubmit}>
+                                                        <div className = "relative w-full mb-3">
+                                                            <label className = "block uppercase text-gray-700 text-xs font-bold mb-2" for="grid-password">Nombre</label>
+                                                            <input onChange = {handleChange} value = {account.name} type="text" className = "px-3 py-3 placeholder-gray-400 text-gray-700 bg-white border border-transparent rounded text-sm shadow focus:outline-none focus:shadow-outline w-full" placeholder="Nombre"/>
+                                                        </div>
+                                                        <div className = "relative w-full mb-3">
+                                                            <label className = "block uppercase text-gray-700 text-xs font-bold mb-2" for="grid-password">Email</label>
+                                                            <input onChange = {handleChange} value = {account.email} type="email" className = "px-3 py-3 placeholder-gray-400 text-gray-700 bg-white border border-transparent rounded text-sm shadow focus:outline-none focus:shadow-outline w-full" placeholder="Email"/>
+                                                        </div>
+                                                        <div className = "relative w-full mb-3">
+                                                            <label className = "block uppercase text-gray-700 text-xs font-bold mb-2" for="grid-password">Jerarquia</label>
+                                                            <select onChange = {handleChange} value = {account.hierarchy} type = "select" className = "px-3 py-3 text-gray-700 bg-white border border-transparent rounded text-sm shadow focus:outline-none focus:shadow-outline w-full">
+                                                                <option className = "text-gray-400" disabled defaultValue>Elegir jerarquia</option>
+                                                                <option>Dueño</option>
+                                                                <option>Co-Dueño</option>
+                                                            </select>
+                                                        </div>
+                                                        <div className = "relative w-full mb-3">
+                                                            <label className = "block uppercase text-gray-700 text-xs font-bold mb-2" for="grid-password">Contraseña</label>
+                                                            <input onChange = {handleChange} value = {account.password} type="password" className = "px-3 py-3 placeholder-gray-400 text-gray-700 bg-white border border-transparent rounded text-sm shadow focus:outline-none focus:shadow-outline w-full" placeholder="Contraseña"/>
+                                                        </div>
+                                                        <div className = "relative w-full mb-3">
+                                                            <label className = "block uppercase text-gray-700 text-xs font-bold mb-2" for="grid-password">Contraseña repetida</label>
+                                                            <input onChange = {handleChange} value = {account.passwordCheck} type="password" className = "px-3 py-3 placeholder-gray-400 text-gray-700 bg-white border border-transparent rounded text-sm shadow focus:outline-none focus:shadow-outline w-full" placeholder="Contraseña repetida"/>
+                                                        </div>
+                                                        <div className = "text-center mt-6">
+                                                            <button onClick = {handleSubmit} className = "bg-gray-700 text-white active:bg-gray-100 text-sm font-bold uppercase px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 w-75" type="button">Crear</button>
+                                                        </div>
+                                                    </form>
                                                 </div>
                                             </div>
                                         </div>
