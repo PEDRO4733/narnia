@@ -3,6 +3,22 @@ import mongoose from 'mongoose';
 import { Router } from 'express';
 import Ctrl from './controllers/Ctrl.js';
 
+import { fileURLToPath } from 'url';
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
+
+
+//Codigo del archivo
+
+import multer from 'multer';
+import path from 'path';
+import fs from 'fs';
+import Image from './models/Image.js'
+import mimetypes from 'mime-types'
+
+
+
 const app = express();
 app.use(express.json());
 const router = Router();
@@ -32,4 +48,8 @@ app.listen(app.get('port'),() => {
 router.post("/register",Ctrl.register);
 router.post("/login",Ctrl.login);
 
+
+app.use(router)  
+
 app.use(router);
+
